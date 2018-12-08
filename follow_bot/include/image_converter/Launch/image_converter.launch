@@ -1,0 +1,9 @@
+<launch> 
+    <param name="/use_sim_time" value="true" />   
+    
+    <!-- Launch turtle bot world -->
+    <include file="$(find turtlebot_gazebo)/launch/turtlebot_world.launch"/>       
+ 
+    <!-- Launch image converter node -->
+    <node name="image_converter" pkg="image_converter" type="image_converter" output="screen"/>
+</launch>
